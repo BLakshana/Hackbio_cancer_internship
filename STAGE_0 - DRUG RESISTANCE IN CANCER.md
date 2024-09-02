@@ -1,6 +1,6 @@
 <!--StartFragment-->
 
-<!--StartFragment-->   **DRUG RESISTANCE IN CANCER**<!--EndFragment-->
+**DRUG RESISTANCE IN CANCER**
 
 ****
 
