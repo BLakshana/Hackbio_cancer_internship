@@ -6,8 +6,6 @@
 
 Drug resistance poses a serious threat in cancer treatment, significantly impacting the effectiveness of drugs. As cancer cells evolve and advance, they develop mechanisms to evade the effects of therapeutic agents, leading to treatment failure and disease progression. Initially, the cell exhibits resistance towards a single chemotherapeutic agent, which then gradually progresses to other agents with similar structures, leading to multidrug resistance. Understanding the drug resistance mechanism is essential for developing strategies that can be employed to address and overcome drug resistance. This essay will briefly discuss types of resistance in cancer and different mechanisms by which the resistance is developed.
 
- 
-
 **TYPES OF RESISTANCE IN CANCER**:
 
 The drug resistance in cancer is broadly classified into two types, the intrinsic and the extrinsic resistance. 
