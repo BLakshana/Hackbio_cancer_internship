@@ -8,6 +8,7 @@ Drug resistance poses a serious threat in cancer treatment, significantly impact
 
 
 **TYPES OF RESISTANCE IN CANCER**:
+
 The drug resistance in cancer is broadly classified into two types, the intrinsic and the extrinsic resistance. 
 
 **Innate/Intrinsic resistance**:
@@ -18,6 +19,7 @@ It is a type of resistance that is developed over time when exposed to drugs dur
 
 
 **MECHANISMS OF DRUG RESISTANCE**:
+
 The mechanisms are classified into 6 distinct categories and are often found to occur in combination, which makes them highly complex. They are alteration of drug targets, drug efflux pump, repair of DNA damage, cell death inhibition, altered proliferation and drug inactivation. Among these, 3 will be discussed with examples.
 
 **Alteration of drug targets**:
@@ -31,10 +33,12 @@ To prevent cell death due to the DNA damage inflicted by drugs, the cancer cells
 
 
 **CONCLUSION**:
+
 Combating drug resistance requires a multifaceted approach. Several strategies like polychemotherapy, targeted therapy, immunological therapy and personalized medicines are currently employed to overcome or to be more precise delay the development of resistance. Continued research and innovation are essential to advance our ability to address drug resistance and enhance cancer treatment.
 
 
 **REFERENCE:**
+
 <!--StartFragment--><!--EndFragment-->
 
 1. Vasan, N., Baselga, J., & Hyman, D. M. (2019). A view on drug resistance in cancer. _Nature_, _575_(7782), 299–309. <https://doi.org/10.1038/s41586-019-1730-1>
