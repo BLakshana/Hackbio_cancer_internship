@@ -8,7 +8,6 @@ Drug resistance poses a serious threat in cancer treatment, significantly impact
 
 
 **TYPES OF RESISTANCE IN CANCER:**
-<!--StartFragment--><!--EndFragment-->
 The drug resistance in cancer is broadly classified into two types, the intrinsic and the extrinsic resistance. 
 
 **Innate/Intrinsic resistance**: It is a type of resistance that pre-exists before treatment. Possible causes are (i) genetic alteration and (ii) activation of defense mechanisms against environmental toxins. E.g., cisplatin treatment in gastric cancer resulted in a low survival rate of HER2/Snail double-positive patients. This is because the upregulation of Snail transcription factor driven by overexpression of the HER2 gene induced a morphological change similar to epithelial-mesenchymal transition, which makes cancer cells more resistant.
