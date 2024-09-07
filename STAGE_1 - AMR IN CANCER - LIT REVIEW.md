@@ -1,12 +1,27 @@
 <!--StartFragment-->
 
-<h2 align="center">
+<h3 align="center">
 <kbd>TRACK: AMR IN CANCER</kbd>
 <br/>
 LITERATURE REVIEW OF
 <br/>
-Whole-Genome Sequencing Accurately Identifies Resistance to Extended Spectrum β-Lactams for Major Gram-Negative Bacterial Pathogens
-</h2> 
+Whole-Genome Sequencing Accurately Identifies Resistance to Extended </br> 
+Spectrum β-Lactams for Major Gram-Negative Bacterial Pathogens
+</h3>
+
+<h4 align="center">
+AUTHORS
+</h4> 
+<div align="center">
+<table><tr><td> 
+  
+Adaradohun Samson (***@Adara***); Nwokocha Amarachi (***@Amara***); </br>
+Lakshana Bakthavachalam (***@Lakshana***); Nada ElSayed Ahmed (***@Nada\_EA***)
+
+</td></tr></table>
+</div>
+
+***
 
 <br/>
 <h3 align="center">
@@ -43,24 +58,6 @@ To summarize, the evolution of WGS improves the feasibility of genome-wide analy
 REFERENCE
 </h3>
 Shelburne, S. A., Kim, J., Munita, J. M., Sahasrabhojane, P., Shields, R. K., Press, E. G., Li, X., Arias, C. A., Cantarel, B., Jiang, Y., Kim, M. S., Aitken, S. L., & Greenberg, D. E. (2017). Whole-Genome Sequencing Accurately Identifies Resistance to Extended-Spectrum β-Lactams for Major Gram-Negative Bacterial Pathogens. _Clinical infectious diseases : an official publication of the Infectious Diseases Society of America_, _65_(5), 738–745. (https://doi.org/10.1093/cid/cix417)
-
-<br/><br/>
-
-
-<h3 align="center">
-CONTRIBUTORS
-</h3>
-
-<div align="center">
-<table><tr><td>
-  
-Adaradohun Samson (***@Adara***) <br/>
-Nwokocha Amarachi (***@Amara***) <br/>
-Lakshana Bakthavachalam (***@Lakshana***)<br/>
-Nada ElSayed Ahmed (***@Nada\_EA***)<br/>
-
-</td></tr></table>
-</div>
 
 
 <!--EndFragment-->
