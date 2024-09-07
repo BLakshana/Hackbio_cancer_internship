@@ -59,5 +59,7 @@ REFERENCE
 </h3>
 Shelburne, S. A., Kim, J., Munita, J. M., Sahasrabhojane, P., Shields, R. K., Press, E. G., Li, X., Arias, C. A., Cantarel, B., Jiang, Y., Kim, M. S., Aitken, S. L., & Greenberg, D. E. (2017). Whole-Genome Sequencing Accurately Identifies Resistance to Extended-Spectrum β-Lactams for Major Gram-Negative Bacterial Pathogens. _Clinical infectious diseases : an official publication of the Infectious Diseases Society of America_, _65_(5), 738–745. (https://doi.org/10.1093/cid/cix417)
 
+<br/><br/>
+***VIDEO LINK***: *(https://www.linkedin.com/posts/nada-elsayed-ahmed_hackbio2024-amrincancer-bioinformatics-activity-7238205554685284352-yYro?utm_source=share&utm_medium=member_desktop)*
 
 <!--EndFragment-->
