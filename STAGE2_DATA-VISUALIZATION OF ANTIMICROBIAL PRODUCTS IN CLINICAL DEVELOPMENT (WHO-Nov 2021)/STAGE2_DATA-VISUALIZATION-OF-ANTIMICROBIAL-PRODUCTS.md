@@ -1,4 +1,29 @@
-</br> WHO reviewed the publicly available information on antibacterial
+<h3 align="center">
+<kbd>TRACK: AMR IN CANCER</kbd>
+<br/>
+DATA ANALYSIS AND VISUALIZATION
+<br/>
+Pipeline of antimicrobial agents in clinical development (WHO - Nov 2021)
+</h3>
+
+</br>
+<h4 align="center">
+CONTRIBUTORS
+</h4> 
+<div align="center">
+<table><tr><td> 
+  
+Adaradohun Samson (***@Adara***); Nwokocha Amarachi (***@Amara***); </br>
+Lakshana Bakthavachalam (***@Lakshana***); Astrid Liliana Vargas Sanchez (***@Liliana***); </br>
+Mahesh Rani Kamilus (***@Mahesh***)
+
+</td></tr></table>
+</div>
+
+***
+
+</br> 
+WHO reviewed the publicly available information on antibacterial
 agents in pre-clinical and clinical development to assess the drug
 candidates action against WHO identified bacterial priority pathogens,
 *Mycobacterium tuberculosis*, and *Clostridium difficile*.</br>
@@ -73,17 +98,6 @@ library(ggplot2)
 library(dplyr)
 ```
 
-    ## 
-    ## Attaching package: 'dplyr'
-
-    ## The following objects are masked from 'package:stats':
-    ## 
-    ##     filter, lag
-
-    ## The following objects are masked from 'package:base':
-    ## 
-    ##     intersect, setdiff, setequal, union
-
 ``` r
 # DATA STRATIFICATION
 Antibiotics <- AMR_PRODUCTS %>% filter(Product.type == "Antibiotics")
@@ -103,8 +117,8 @@ PRODUCT_TYPE
     ## 1 Non_traditional    34
     ## 2     Antibiotics    46
 
-The data was subsetted based on product type. 46 antibiotics and 34
-non-traditional agents were found as mentioned. </br>
+The data was subsetted based on product type. **46 antibiotics and 34
+non-traditional agents** were found as mentioned. </br>
 
 ``` r
 #TARGET PATHOGEN
@@ -113,6 +127,7 @@ ggplot(data = AMR_PRODUCTS, aes(y= `Pathogen.name`))+ geom_bar(aes(fill = Pathog
 ```
 
 ![](STAGE2_DATA-VISUALIZATION-OF-ANTIMICROBIAL-PRODUCTS_files/figure-markdown_github/unnamed-chunk-3-1.png)
+
 Most of the drugs studied are targeted at ***Staphylococcus aureus***,
 while the fewest are focused on ***Mycobacterium tuberculosis***. </br>
 
@@ -175,6 +190,7 @@ ggplot(data = Non_traditional, aes(x = Product.name)) + geom_bar(aes(fill = Path
 ```
 
 ![](STAGE2_DATA-VISUALIZATION-OF-ANTIMICROBIAL-PRODUCTS_files/figure-markdown_github/unnamed-chunk-4-3.png)
+
 From table and graphs, we can infer details on the spectrum of activity
 of antibiotics and non-traditional. Most of the products are
 broad-spectrum, effective against all priority pathogens.
@@ -190,8 +206,8 @@ Narrow-spectrum antibiotics and non-traditional specifically against
 **ART24,BB128,DAV132,CP101,IM01,LMN201,MET2,RBX2660,RBX7455,SER101,SYN-004,VE303**
 respectively.
 
-More antibiotics target *Mycobacterium tuberculosis* when compared to
-non-traditional and the reverse holds true for *Clostridium difficile*
+More antibiotics target ***Mycobacterium tuberculosis*** when compared to
+non-traditional and the reverse holds true for ***Clostridium difficile***
 </br>
 
 ``` r
@@ -637,6 +653,7 @@ priority
     ## 14       Mycobacterium tuberculosis                         N/A
     ## 15         Clostridioides difficile                         N/A
 
+
 The threat level of priority pathogens were visualized and tabulated.
 
 **Critical priority pathogens** pose the most urgent threat due to their
@@ -678,6 +695,7 @@ ggplot(NT_Activity, aes(x =Active.against.priority.pathogens., fill = Product.na
 ```
 
 ![](STAGE2_DATA-VISUALIZATION-OF-ANTIMICROBIAL-PRODUCTS_files/figure-markdown_github/unnamed-chunk-9-3.png)
+
 Antibiotics and non-traditional products that are active against
 priority pathogens are visualized.
 
@@ -1136,5 +1154,5 @@ MGB-BP-3, Ridinilazole.
 
 ------------------------------------------------------------------------
 
-</br> ***THE DATA WAS SEGMENTED INTO SUBSETS TO REMOVE DUPLICATES AND
+ ***THE DATA WAS SEGMENTED INTO SUBSETS TO REMOVE DUPLICATES AND
 OBTAIN MEANINGFUL RESULTS***
