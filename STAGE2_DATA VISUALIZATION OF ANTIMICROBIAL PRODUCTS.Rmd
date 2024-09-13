@@ -1,0 +1,203 @@
+---
+title: "DATA ANALYSIS AND VISUALIZATION </br> Pipeline of antimicrobial agents in clinical development (WHO - Nov 2021)"
+output: html_notebook
+---
+</br>
+WHO reviewed the publicly available information on antibacterial agents in pre-clinical and clinical development to assess the drug candidates action against WHO identified bacterial priority pathogens, *Mycobacterium tuberculosis*, and *Clostridium difficile*.</br>
+
+In Nov 2021, a total of 80 products were in clinical development (3 in pre-registration phase). Among these 80 candidates 46 were antibiotics and 34 were non-traditional antibacterial agents. Through this pipeline the products can be explored by type, phase of clinical development, activity against pathogens,innovativeness, route of administration, antibiotic class and developers.</br>
+
+Let's try to analyse and visualize the data.
+</br>
+
+```{r}
+# IMPORTING DATA AS CSV FILE
+AMR_PRODUCTS <- read.csv(file="AMR_DATA.csv")
+head(AMR_PRODUCTS)
+library(ggplot2)
+library(dplyr)
+```
+
+```{r}
+# DATA STRATIFICATION
+Antibiotics <- AMR_PRODUCTS %>% filter(Product.type == "Antibiotics")
+Non_traditional <- AMR_PRODUCTS %>% filter(Product.type == "Non-traditional")
+
+COUNT_1 <- unique(Non_traditional$Product.name)
+L1 <- length(COUNT_1)
+
+COUNT_2 <- unique(Antibiotics$Product.name)
+L2 <- length(COUNT_2)
+
+PRODUCT_TYPE <- data.frame("Type" = c("Non_traditional","Antibiotics"),"Count" = c(L1,L2))
+PRODUCT_TYPE
+```
+The data was subsetted based on product type. 46 antibiotics and 34 non-traditional agents were found as mentioned.
+</br>
+
+```{r}
+#TARGET PATHOGEN
+AMR_PRODUCTS$Pathogen.name <- as.factor(AMR_PRODUCTS$Pathogen.name)
+ggplot(data = AMR_PRODUCTS, aes(y= `Pathogen.name`))+ geom_bar(aes(fill = Pathogen.name), color = "black")+ labs(title = "TARGET PATHOGEN", y= "Pathogen", x= "Frequency")+ theme_classic()+ theme(plot.title  = element_text(face = "bold"),legend.key.size = unit(0.2,"cm"), legend.text = element_text(size=5))
+```
+Most of the drugs studied are targeted at ***Staphylococcus aureus***, while the fewest are focused on ***Mycobacterium tuberculosis***.
+</br>
+```{r}
+# TARGET OF ANTIMICROBIAL AGENTS: SPECTRUM OF ACTIVITY
+Target <- AMR_PRODUCTS %>% select(Pathogen.name, Product.type)
+Target <- table(Target)
+Target <- as.data.frame(Target)
+Target
+ggplot(Target, aes(x = Pathogen.name, fill = Freq )) + geom_bar(position = "dodge", color="black") + facet_wrap(~ Product.type) + labs(title = "SPECTRUM OF ANTIMICROBIALS AGAINST PATHOGENS", fill = "Count of drugs against pathogens", x= "Pathogen")+ theme_classic()+  theme(plot.title  = element_text(face = "bold")) + theme(axis.text.x = element_text(angle = 90))
+# ANTIBIOTICS - TARGET PATHOGENS
+ggplot(data = Antibiotics, aes(x = Product.name)) + geom_bar(aes(fill = Pathogen.name), color ="black")+ labs(title = "ANTIBIOTICS - TARGET PATHOGENS", y = "TARGET", x = "PRODUCT", fill= "Target")+ theme_classic()+  theme(plot.title  = element_text(face = "bold"), legend.key.size = unit(0.2,"cm"), legend.text = element_text(size=5))+ theme(axis.text.x = element_text(angle = 90))
+# NON-TRADITIONALS - TARGET PATHOGEN
+ggplot(data = Non_traditional, aes(x = Product.name)) + geom_bar(aes(fill = Pathogen.name), color ="black")+ labs(title = "NON-TRADITIONALS PRODUCTS - TARGET PATHOGENS", y = "TARGET", x = "PRODUCT", fill= "Target")+ theme_classic()+  theme(plot.title  = element_text(face = "bold"), legend.key.size = unit(0.2,"cm"), legend.text = element_text(size=5))+ theme(axis.text.x = element_text(angle = 90))
+```
+From table and graphs, we can infer details on the spectrum of activity of antibiotics and non-traditional. Most of the products are broad-spectrum, effective against all priority pathogens.
+
+Narrow-spectrum antibiotics and non-traditional specifically against *Mycobacterium tuberculosis* are **GSK3036656,BTZ-043,Delpazolid,GSK2556286,Macozinone,OPC-167832,Telacebec,TBI-223,TBI-166,TBAJ-876,TBAJ586,TBA7371** and  **BVL-GSK098** respectively. 
+
+Narrow-spectrum antibiotics and non-traditional specifically against *Clostridium difficile* are **CRS3123,DNV3837,Ibezapolstat,MGB-BP-3,Ridinilazole** and **ART24,BB128,DAV132,CP101,IM01,LMN201,MET2,RBX2660,RBX7455,SER101,SYN-004,VE303** respectively.
+
+More antibiotics target *Mycobacterium tuberculosis* when compared to non-traditional and the reverse holds true for *Clostridium difficile*
+</br>
+```{r}
+# ROUTE OF ADMINISTRATION
+Route <- AMR_PRODUCTS %>% select(Product.name, Route.of.administration)
+Route <- distinct(Route)
+Route <- as.data.frame(Route)
+ggplot(data = Route, aes(x = Route.of.administration)) + geom_bar(aes(fill = Route.of.administration), color ="black")+ labs(title = "ROUTE OF ADMINISTRATION",  x = "Route", fill= "Route")+ theme_classic()+  theme(plot.title  = element_text(face = "bold"))+ theme(axis.text.x = element_text(angle = 90))
+Route
+```
+**Oral** is the most preferred route of administration, seconded by **IV**.
+</br>
+```{r}
+# CLINICAL DEVELOPMENT PHASE OF PRODUCTS
+Phase <- AMR_PRODUCTS %>% select( Product.name,R.D.phase, Product.type)
+Phase <- distinct(Phase)
+Phase <- as.data.frame(Phase)
+ggplot(Phase, aes(x = Product.type, fill = R.D.phase )) + geom_bar(position = "dodge", color="black") + labs(title = "ANTIMICROBIAL PRODUCTS - CLINICAL DEVELOPMENT PHASE", fill = "Phase", x= "Product type")+ theme_classic()+  theme(plot.title  = element_text(face = "bold"))
+#Antibiotics - Clinical phase
+AB_PHASE <- Antibiotics %>% select(Product.name, R.D.phase)
+AB_PHASE <- distinct(AB_PHASE)
+AB_PHASE
+#Non-traditional - Clinical phase
+NT_PHASE <- Non_traditional %>% select(Product.name, R.D.phase)
+NT_PHASE <- distinct(NT_PHASE)
+NT_PHASE
+```
+Information on the clinical development phase of the antimicrobial products is visualized and tabulated.
+
+**Antibiotics:**
+Phase I - 22; Phase II - 14; Phase III - 9; Pre-registration - 1
+
+**Non-traditional:**
+Phase I - 12; Phase II - 15; Phase III - 5; Pre-registration - 2
+
+```{r}
+#ANTIMICROBIALS INDICATION
+AB_Indication <- Antibiotics %>% select(Product.name,Indications)
+AB_Indication <- distinct(AB_Indication)
+NT_Indication <- Non_traditional %>% select(Product.name,Indications)
+NT_Indication <- distinct(NT_Indication)
+#ANTIBIOTICS INDICATION
+AB_Indication
+#NON-TRADITIONALS INDICATION
+NT_Indication
+##(ggplot(data = AB_Indication) + geom_bar(mapping = aes( fill = Product.name, y = Indications), color="black") + labs(title = "ANTIBIOTICS INDICATION", y = "Indications", fill= "Product")+ theme_classic()+  theme(plot.title  = element_text(face = "bold"), legend.key.size = unit(0.2,"cm"), legend.text = element_text(size=5))+theme(axis.text.x = element_text(angle = 90))
+
+##(ggplot(data = NT_Indication) + geom_bar(mapping = aes( fill = Product.name, y = Indications), color="black") + labs(title = "NON-TRADITIONAL PRODUCTS INDICATION", y = "Indications", fill= "Product")+ theme_classic()+  theme(plot.title  = element_text(face = "bold"),legend.key.size = unit(0.2,"cm"), legend.text = element_text(size=5))+theme(axis.text.x = element_text(angle = 90))
+```
+An **antimicrobial indication** refers to specific condition or infection for which an antimicrobial agent is recommended or prescribed.
+
+The indication for antibiotics and non-traditional products is tabulated individually. Plots were not visualized due to spatial inconvenience.
+</br>
+```{r}
+#PRIORITY PATHOGENS AND THEIR THREAT LEVELS
+priority <- AMR_PRODUCTS %>% select(Pathogen.name,Pathogen.activity)
+priority <- distinct(priority)
+priority <- as.data.frame(priority)
+ggplot(data = priority) + geom_bar(mapping = aes( fill = Pathogen.name, x = Pathogen.activity), color="black") + labs(title = "PRIORITY PATHOGENS AND THEIR THREAT LEVELS", x = "Priority level", fill= "Pathogen")+ theme_classic()+  theme(plot.title  = element_text(face = "bold"),legend.key.size = unit(0.2,"cm"), legend.text = element_text(size=5))+theme(axis.text.x = element_text(angle = 10))
+priority
+```
+The threat level of priority pathogens were visualized and tabulated.
+
+**Critical priority pathogens** pose the most urgent threat due to their resistant towards multiple antimicrobial products. Pathogens like ***Pseudomonas aeruginosa, Enterobacterales, Acinetobacter baumannii*** falls under this category.
+</br>
+```{r}
+#ACTIVITY OF PRODUCTS AGAINST PRIORITY PATHOGEN
+Activity <- AMR_PRODUCTS %>% select( Active.against.priority.pathogens., Product.type)
+Activity <- lapply(Activity, function(x) ifelse(x == "N/A", NA, x))
+Activity <- as.data.frame(Activity)
+Activity <- na.omit(Activity)
+ggplot(Activity, aes(x = Product.type, fill = Active.against.priority.pathogens. )) + geom_bar(position = "dodge", color="black")  + labs(title = "ANTIMICROBIAL PRODUCT ACTIVE AGAINST PATHOGENS", fill = "Active", x= "Product")+ theme_classic()+  theme(plot.title  = element_text(face = "bold"))
+#ANTIBIOTICS ACTIVE AGAINST PRIORITY PATHOGENS
+AB_Activity <- Antibiotics %>% select(Product.name,Pathogen.name,Active.against.priority.pathogens.)
+AB_Activity <- distinct(AB_Activity)
+AB_Activity <- lapply(AB_Activity, function(x) ifelse(x == "N/A", NA, x))
+AB_Activity <- as.data.frame(AB_Activity)
+AB_Activity <- na.omit(AB_Activity)
+ggplot(AB_Activity, aes(x =Active.against.priority.pathogens., fill = Product.name )) + geom_bar(position = "dodge", color="black") + facet_wrap(~ Pathogen.name) + labs(title = "ANTIBIOTICS ACTIVE AGAINST PRIORITY PATHOGENS", x = "Activity", fill= "Product")+ theme_classic()+  theme(plot.title  = element_text(face = "bold"),legend.position = "bottom", legend.key.size = unit(0.2,"cm"), legend.text = element_text(size=4))
+#NON-TRADITIONALS ACTIVE AGAINST PRIORITY PATHOGENS
+NT_Activity <- Non_traditional %>% select(Product.name,Pathogen.name,Active.against.priority.pathogens.)
+NT_Activity <- distinct(NT_Activity)
+NT_Activity <- lapply(NT_Activity, function(x) ifelse(x == "N/A", NA, x))
+NT_Activity <- as.data.frame(NT_Activity)
+NT_Activity <- na.omit(NT_Activity)
+ggplot(NT_Activity, aes(x =Active.against.priority.pathogens., fill = Product.name )) + geom_bar(position = "dodge", color="black") + facet_wrap(~ Pathogen.name) + labs(title = "NON-TRADITIONAL PRODUCTS ACTIVE AGAINST PRIORITY PATHOGENS", x = "Activity", fill= "Product")+ theme_classic()+  theme(plot.title  = element_text(face = "bold"),legend.position = "bottom",legend.key.size = unit(0.2,"cm"), legend.text = element_text(size=4))
+```
+Antibiotics and non-traditional products that are active against priority pathogens are visualized.
+
+Antibiotics **ARF-1796,TXA709, QPX7728+QPX2014** are active against most of the pathogens. **Afabicin** is inactive to be the most inactive.
+
+Non-traditional products **TRL1068,phage,bacteriophage and BX004-A** are found to be predominantly active against most of the pathogens.
+</br>
+```{r}
+#ANTIBACTERIAL CLASS
+AB_product_class <- Antibiotics %>% select(Product.name,Antibacterial.class)
+AB_product_class <- distinct(AB_product_class)
+AB_product_class <- as.data.frame(AB_product_class)
+NT_product_class <- Non_traditional %>% select(Product.name,Antibacterial.class)
+NT_product_class <- distinct(NT_product_class)
+NT_product_class <- as.data.frame(NT_product_class)
+#ANTIBIOTICS
+ggplot(data = AB_product_class) + geom_bar(mapping = aes( fill = Product.name, y = Antibacterial.class), color="black") + labs(title = "ANTIBIOTICS - CLASS", y = "Class", fill= "Product")+ theme_classic()+  theme(plot.title  = element_text(face = "bold"),legend.key.size = unit(0.2,"cm"), legend.text = element_text(size=3.5))+theme(axis.text.x = element_text(angle = 90))
+AB_product_class
+#NON-TRADITIONALS
+ggplot(data = NT_product_class) + geom_bar(mapping = aes( fill = Product.name, y = Antibacterial.class), color="black") + labs(title = "NON-TRADITIONAL - CLASS", y = "Class", fill= "Product")+ theme_classic()+  theme(plot.title  = element_text(face = "bold"),legend.key.size = unit(0.2,"cm"), legend.text = element_text(size=5))+theme(axis.text.x = element_text(angle = 90))
+NT_product_class
+```
+Antibacterial class of antibiotics and non-traditional products are visualized and tabulated.
+
+Major **non-traditional** products lie under the class **Live bio-therapeutic product**.
+</br>
+```{r}
+#DEVELOPERS
+Developer <- AMR_PRODUCTS %>% select(Product.name,Developer)
+Developer <- distinct(Developer)
+Developer <- as.data.frame(Developer)
+Developer
+```
+The developers of the antimicrobial products are tabulated.
+</br>
+```{r}
+#INNOVATIVENESS OF THE PRODUCTS
+Innovativeness <- AMR_PRODUCTS %>% select(Product.name,Innovative.)
+Innovativeness <- distinct(Innovativeness)
+Innovativeness <- lapply(Innovativeness, function(x) ifelse(x == "N/A", NA, x))
+Innovativeness <- as.data.frame(Innovativeness)
+Innovativeness <- na.omit(Innovativeness)
+ggplot(data = Innovativeness) + geom_bar(mapping = aes( fill = Product.name, x = Innovative.), color="black") + labs(title = "INNOVATIVE PRODUCT", X = "Innovativenss", fill= "Product")+ theme_classic()+  theme(plot.title  = element_text(face = "bold"),legend.key.size = unit(0.2,"cm"), legend.text = element_text(size=5))
+Innovativeness
+```
+Among the 80 products, 17 are found to be innovative. 
+
+**Innovative products** 
+Afabicin, Gepotidacin, Taniborbactam + cefepime, TXA709, VNRX-7145 + ceftibuten, 	Zoliflodacin, GSK3036656, 	BTZ-043, 	GSK2556286, 	Macozinone, OPC-167832, Telacebec, CRS3123, Ibezapolstat, MGB-BP-3, Ridinilazole.
+
+**TXA709** - *Active against most of the priority pathogens.*
+
+***
+</br>
+***THE DATA WAS SEGMENTED INTO SUBSETS TO REMOVE DUPLICATES AND OBTAIN MEANINGFUL RESULTS*** 
