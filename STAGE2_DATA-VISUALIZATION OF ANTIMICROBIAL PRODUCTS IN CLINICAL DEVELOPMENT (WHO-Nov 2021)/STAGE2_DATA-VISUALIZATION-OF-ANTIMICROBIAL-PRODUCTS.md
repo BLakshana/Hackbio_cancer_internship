@@ -1,12 +1,11 @@
-<h3 align="center">
+<h2 align="center">
 <kbd>TRACK: AMR IN CANCER</kbd>
 <br/>
 DATA ANALYSIS AND VISUALIZATION
 <br/>
 Pipeline of antimicrobial agents in clinical development (WHO - Nov 2021)
-</h3>
+</h2>
 
-</br>
 <h4 align="center">
 CONTRIBUTORS
 </h4> 
