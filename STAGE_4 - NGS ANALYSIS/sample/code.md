@@ -68,5 +68,5 @@
 
 -> _bcftools view -Ov -o variants/variant.vcf variants/variant.bcf_
 
-# VCF FILE NOT INCLUDED IN OUTPUT DUE TO SIZE ISSUES (OVER 100MB)
+***VCF FILE NOT INCLUDED IN OUTPUT DUE TO SIZE ISSUES (OVER 100MB)***
 <!--EndFragment-->
