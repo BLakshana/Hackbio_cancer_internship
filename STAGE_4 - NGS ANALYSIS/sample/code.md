@@ -53,6 +53,8 @@
 
 <kbd> _bwa index sample\_seq/reference.fasta_ </kbd>
 
+<kbd> _mkdir alignment\_sample_ </kbd>
+
 <kbd> _bwa mem -t 4 sample\_seq/reference.fasta repaired\_sample/forward\_repair.fastq.gz repaired\_sample/reverse\_repair.fastq.gz | samtools view -b > alignment\_sample/aligned.bam_ </kbd>
 
 **Sort and index the aligned sequence**
