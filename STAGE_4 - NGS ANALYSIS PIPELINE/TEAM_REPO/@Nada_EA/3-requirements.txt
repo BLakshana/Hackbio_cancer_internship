@@ -1,0 +1,11 @@
+
+Required Tools:
+
+wget
+fastqc
+fastp
+bwa
+samtools
+bcftools
+
+...
