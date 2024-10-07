@@ -1,4 +1,4 @@
-### **HackBio Internship: Stage 3**
+# **HackBio Internship: Stage 3**
 
 **Authors (@slack):**   
 Lakshana Bakthavachalam **(@Lakshana),**  Nada ElSayed Ahmed **(@Nada\_EA)**
@@ -9,13 +9,13 @@ Lakshana Bakthavachalam **(@Lakshana),**  Nada ElSayed Ahmed **(@Nada\_EA)**
 
 ---
 
-## * **Phase I**
+## **Phase I**
 
 **Google Doc:** [https://docs.google.com/document/d/1V0sQZQAMyaK9svz\_VcVEsrdnY6KWJLA7qIHcCffQY0A/edit\#heading=h.6o1oyespi2s2](https://docs.google.com/document/d/1V0sQZQAMyaK9svz_VcVEsrdnY6KWJLA7qIHcCffQY0A/edit#heading=h.6o1oyespi2s2)
 
 ---
 
-## * **Phase II**
+## **Phase II**
 
 ## **Global Cholera Outbreaks (1949 \- 2016\)**
 
@@ -70,11 +70,11 @@ From 1949 to 1960, the average case fatality rate was quite high. However, after
 
 ---
 
-# **Cholera Outbreak Report Template**
+## **Cholera Outbreak Report Template**
 
 ## **\[Country name\] (Year range)**
 
-### * **Key Metrics**
+### **Key Metrics**
 
 ### **Total Cases:** \[Insert number\]
 
@@ -83,7 +83,7 @@ From 1949 to 1960, the average case fatality rate was quite high. However, after
 ### **Average Case-Fatality Rate:** \[Insert percentage\]
 
 
-### * **Summary:**
+### **Summary:**
 
 1\. Number of Cases:
 
@@ -105,13 +105,13 @@ From 1949 to 1960, the average case fatality rate was quite high. However, after
 * Lowest: \[CFR %\] (Year: \[Year\])
 
 
-### * **Cholera Outbreak Graph:** \[Insert graph with cases, fatalities, & case-fatality rate\]
+### **Cholera Outbreak Graph:** \[Insert graph with cases, fatalities, & case-fatality rate\]
 
 ---
 
-# **Example: Nigeria (1970 \- 2016\)**
+## **Example: Nigeria (1970 \- 2016\)**
 
-## * **Key Metrics**
+## **Key Metrics**
 
 ### **Total Cases:** 310217
 
@@ -119,7 +119,7 @@ From 1949 to 1960, the average case fatality rate was quite high. However, after
 
 ### **Average Case-Fatality Rate:** 6.92%
 
-## * **Summary:**
+## **Summary:**
 
 1\. Number of Cases:
 
@@ -141,14 +141,14 @@ From 1949 to 1960, the average case fatality rate was quite high. However, after
 * Lowest Case-fatality Rate in Nigeria: 0 in the year 1985
 
 
-## * **Cholera Outbreak Graph:** 
+## **Cholera Outbreak Graph:** 
 
 ![Nigeria](https://github.com/user-attachments/assets/4d27e545-081b-4769-a569-037283d8bafb)
 
 ---
 
 
-# **Shiny App: CholeraWatch**
+## **Shiny App: CholeraWatch**
 
 ## **Link to app: [https://jpjxx1-nada-ahmed.shinyapps.io/cholerawatch/](https://jpjxx1-nada-ahmed.shinyapps.io/cholerawatch/)**
 
