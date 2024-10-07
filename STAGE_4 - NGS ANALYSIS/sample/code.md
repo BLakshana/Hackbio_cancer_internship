@@ -69,6 +69,8 @@
 
 <kbd> _conda install -c conda-forge openblas_ </kbd>
 
+<kbd> _mkdir variants_ </kbd>
+
 <kbd> _bcftools mpileup -Ob -o variants/variant.bcf -f sample\_seq/reference.fasta alignment\_sample/aligned\_sorted.bam_ </kbd>
 
 <kbd> _bcftools view -Ov -o variants/variant.vcf variants/variant.bcf_ </kbd>
