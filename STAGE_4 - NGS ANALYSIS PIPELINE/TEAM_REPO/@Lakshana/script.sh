@@ -24,8 +24,8 @@ source "$(conda info --base)/etc/profile.d/conda.sh"
 # Quality control
 conda activate Quality_control
 # Fastqc
-fastqc -i sequences/*_forward.fastq.gz -o qc_sequences/
-fastqc -i sequences/*_reverse.fastq.gz -o qc_sequences/
+fastqc sequences/*_forward.fastq.gz -o qc_sequences/
+fastqc sequences/*_reverse.fastq.gz -o qc_sequences/
 # Trimming
 for file in sequences/*_forward.fastq.gz; do
     fastp -i "$file" -o "trimmed_sequences/$(basename "$file" .fastq.gz)_trimmed.fastq.gz"
@@ -78,7 +78,9 @@ for file in aligned_sequences/*_aligned.bam; do
 done
 
 # Indexing
-samtools index aligned_sequences/*_align_sorted.bam
+for file in aligned_sequences/*_align_sorted.bam; do
+    samtools index "$file"
+done
 
 conda deactivate
 
