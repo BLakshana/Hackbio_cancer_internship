@@ -36,7 +36,7 @@ This included downloading the datasets (forward and reverse sample reads and ref
 In **task two**, we were asked to expand the analysis we did to have an automated pipeline that can be applied to five samples.
 We created three files:
 
-## **"1. script.sh"**: This is the main pipeline script that automates the entire NGS analysis process.
+## **"script.sh"**: This is the main pipeline script that automates the entire NGS analysis process.
 
 It performs the following tasks:
 
@@ -52,10 +52,10 @@ It performs the following tasks:
 
 6- Performs variant calling and generates VCF files.
 
-## **"2. setup.sh"**: This script installs all the necessary tools required for the pipeline.
+## **"setup.sh"**: This script installs all the necessary tools required for the pipeline.
 These include wget, fastqc, fastp, bwa, samtools, and bcftools. It ensures that your environment is ready for executing the script.sh.
 
-## **"3. requirements.txt"**: 
+## **"requirements.txt"**: 
 This file lists all the software tools used in the project.
 
 --- 
