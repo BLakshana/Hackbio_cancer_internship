@@ -21,7 +21,7 @@ rm sequences/_forward.fastq.gz
 rm sequences/_reverse.fastq.gz
 
 # Source the Conda setup
-source "/home/laksh18b/miniconda3/etc/profile.d/conda.sh"
+source "$(conda info --base)/etc/profile.d/conda.sh"
 
 # Quality control
 conda activate Quality_control
@@ -40,7 +40,7 @@ done
 conda deactivate
 
 # Source the Conda setup
-source "/home/laksh18b/miniconda3/etc/profile.d/conda.sh"
+source "$(conda info --base)/etc/profile.d/conda.sh"
 
 # Genome Mapping
 conda activate Genome_mapping
@@ -85,7 +85,7 @@ samtools index aligned_sequences/*_align_sorted.bam
 conda deactivate
 
 # Source the Conda setup
-source "/home/laksh18b/miniconda3/etc/profile.d/conda.sh"
+source "$(conda info --base)/etc/profile.d/conda.sh"
 
 # Variant calling
 conda activate Variant_calling
