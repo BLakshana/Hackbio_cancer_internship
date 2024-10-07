@@ -17,8 +17,6 @@ for SAMPLE in "${SAMPLES[@]}";do
 done
 
 echo SEQUENCES DOWNLOAD COMPLETED
-rm sequences/_forward.fastq.gz
-rm sequences/_reverse.fastq.gz
 
 # Source the Conda setup
 source "$(conda info --base)/etc/profile.d/conda.sh"
