@@ -16,14 +16,14 @@
 
 ## Table of Contents
 
-1. Project Description
-2. Resources
-3. Required Tools (refer to a file named requirements.txt)
-4. System Setup for the Pipeline (automated by setup.sh)
-5. Running the NGS Pipeline (refer to the file script.sh)
+1. [Project Description](https://github.com/BLakshana/Hackbio_cancer_internship/edit/main/STAGE_4%20-%20NGS%20ANALYSIS%20PIPELINE/TEAM_REPO/README.md#1-project-description)
+2. [Resources](https://github.com/BLakshana/Hackbio_cancer_internship/edit/main/STAGE_4%20-%20NGS%20ANALYSIS%20PIPELINE/TEAM_REPO/README.md#2-resources) 
+3. [Required Tools](https://github.com/BLakshana/Hackbio_cancer_internship/edit/main/STAGE_4%20-%20NGS%20ANALYSIS%20PIPELINE/TEAM_REPO/README.md#3-required-tools)
+4. [System Setup for the Pipeline](https://github.com/BLakshana/Hackbio_cancer_internship/edit/main/STAGE_4%20-%20NGS%20ANALYSIS%20PIPELINE/TEAM_REPO/README.md#4-system-setup-for-the-pipeline)
+5. [Running the NGS Pipeline](https://github.com/BLakshana/Hackbio_cancer_internship/edit/main/STAGE_4%20-%20NGS%20ANALYSIS%20PIPELINE/TEAM_REPO/README.md#5-running-the-ngs-pipeline)
 
 ---
-
+## 1. Project Description
 ## This stage of the HackBio internship included two tasks. 
 
 In **task one**, we were required to create a simple NGS analysis pipeline for a single sample.
@@ -60,7 +60,7 @@ This file lists all the software tools used in the project.
 
 --- 
 
-# Resources:
+## 2. Resources:
 **1. Single sample NGS pipeline (Sample: ERR8774458):**
    
    Forward Strand: (https://zenodo.org/records/10426436/files/ERR8774458_1.fastq.gz?download=1)
@@ -104,6 +104,22 @@ This file lists all the software tools used in the project.
     R1: https://github.com/josoga2/yt-dataset/raw/main/dataset/raw_reads/Drysdale_R1.fastq.gz
 
     R2: https://github.com/josoga2/yt-dataset/raw/main/dataset/raw_reads/Drysdale_R2.fastq.gz
+---
+## 3. Required Tools:
+You can find a list of the used tools in the "requirements.txt" file.
+
+---
+## 4. System Setup for the Pipeline:
+You can setup your system for the pipeline by using the "setup.sh" file, which will automatically download the required tools to your terminal.
+
+  `bash setup.sh`
+
+---
+## 5. Running the NGS Pipeline:
+You can run the pipeline file "script.sh" to automatically work through all the samples. 
+
+  `bash script.sh`
+
 ---
 
 <div align="center">
