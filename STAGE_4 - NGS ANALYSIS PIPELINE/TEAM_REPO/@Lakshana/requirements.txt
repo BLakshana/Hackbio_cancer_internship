@@ -1,4 +1,4 @@
-PACKAGES REQUIRED: 
+# PACKAGES REQUIRED: 
 1. fastqc
 2. multiqc
 3. fastp
@@ -7,7 +7,7 @@ PACKAGES REQUIRED:
 6. samtools
 7. bcftools
 
-ENVIRONMENTS:
+# ENVIRONMENTS:
 1. Quality_control
 2. Genome_mapping
 3. Variant_calling
