@@ -35,7 +35,7 @@ The pipeline included information on drug type, clinical development phase, acti
 
 <h2> STAGE 3 </h2>
 
-**TASK** : **(A)** CODE IN BASH **(B)** DATA ANALYSIS AND VISUALIZATION OF "*Global cholera outbreaks - 1949-2016 (WHO).*"
+**TASK** : **(A)** CODE IN BASH **(B)** DATA VISUALIZATION OF "*Global cholera outbreaks - 1949-2016 (WHO).*"
 
 **Skills developed** : Data Analysis and Visualization, Bash (Scripting language).
 
