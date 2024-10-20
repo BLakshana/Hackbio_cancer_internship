@@ -45,6 +45,6 @@ The task provided knowledge on handling genomic data using Bash.
 
 **TASK** : DEVELOP A PIPELINE FOR NGS ANALYSIS.
 
-**Skills developed** : Bash (Scripting language), Google Cloud Shell.
+**Skills developed** : Bash (Scripting language), Google Cloud Shell, Variant calling.
 
 This task involved developing an NGS analysis pipeline using tools such as FASTQC, FASTP, BBMap, BWA, Samtools, and BCFtools for quality control, read alignment, variant calling, and post-alignment processing of genomic data.
