@@ -70,46 +70,7 @@ From 1949 to 1960, the average case fatality rate was quite high. However, after
 
 ---
 
-## **Cholera Outbreak Report Template**
-
-## **\[Country name\] (Year range)**
-
-### **Key Metrics**
-
-### **Total Cases:** \[Insert number\]
-
-### **Total Fatalities:** \[Insert number\]
-
-### **Average Case-Fatality Rate:** \[Insert percentage\]
-
-
-### **Summary:**
-
-1\. Number of Cases:
-
-* Highest: \[Number of cases\] (Year: \[Year\])  
-* Lowest: \[Number of cases\] (Year: \[Year\])
-
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
-2\. Number of Fatalities:
-
-* Highest: \[Number of fatalities\] (Year: \[Year\])  
-* Lowest: \[Number of fatalities\] (Year: \[Year\])
-
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
-3\. Case-Fatality Rate (CFR):
-
-* Highest: \[CFR %\] (Year: \[Year\])  
-* Lowest: \[CFR %\] (Year: \[Year\])
-
-
-### **Cholera Outbreak Graph:** \[Insert graph with cases, fatalities, & case-fatality rate\]
-
----
-
-## **Example: Nigeria (1970 \- 2016\)**
+## Nigeria (1970 \- 2016\)
 
 ## **Key Metrics**
 
