@@ -35,8 +35,16 @@ The pipeline included information on drug type, clinical development phase, acti
 
 <h2> STAGE 3 </h2>
 
-**TASK** : INTODUCTION TO BASH AND DATA ANALYSIS AND VISUALIZATION OF "*Global cholera outbreaks - 1949-2016 (WHO).*"
+**TASK** : **(A)** CODE IN BASH **(B)** DATA ANALYSIS AND VISUALIZATION OF "*Global cholera outbreaks - 1949-2016 (WHO).*"
 
 **Skills developed** : Data Analysis and Visualization, Bash (Scripting language).
 
 The task provided knowledge on handling genomic data using Bash.
+
+<h2> STAGE 4 </h2>
+
+**TASK** : DEVELOP A PIPELINE FOR NGS ANALYSIS.
+
+**Skills developed** : Bash (Scripting language), Google Cloud Shell.
+
+This task involved developing an NGS analysis pipeline using tools such as FASTQC, FASTP, BBMap, BWA, Samtools, and BCFtools for quality control, read alignment, variant calling, and post-alignment processing of genomic data.
