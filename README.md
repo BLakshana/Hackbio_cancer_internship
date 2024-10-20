@@ -11,7 +11,7 @@ HackBio INTERNSHIP 2024
 
 <h2> STAGE 0 </h2>
 
-**TASK** : ESSAY WRITING ON TOPIC "*Drug resistance in cancer*"
+**TASK** : ESSAY WRITING ON TOPIC "*Drug resistance in cancer.*"
 
 **Skills Developed** : Scientific Writing, Markdown Language.
 
@@ -19,7 +19,7 @@ The task provided insights into the different types of resistance in cancer and 
 
 <h2> STAGE 1 </h2>
 
-**TASK** : REVIEW THE PAPER "*Whole-Genome Sequencing Accurately Identifies Resistance to Extended Spectrum β-Lactams for Major Gram-Negative Bacterial Pathogens*"
+**TASK** : REVIEW THE PAPER "*Whole-Genome Sequencing Accurately Identifies Resistance to Extended Spectrum β-Lactams for Major Gram-Negative Bacterial Pathogens.*"
 
 **Skills developed** : Scientific Writing, Presentation skills.
 
@@ -27,8 +27,10 @@ The task enhanced understanding of the significance of whole-genome sequencing (
 
 <h2> STAGE 2 </h2>
 
-**TASK** : DATA ANALYSIS AND VISUALIZATION OF "*Pipeline of antimicrobial agents in clinical development (WHO - Nov 2021)*"
+**TASK** : DATA ANALYSIS AND VISUALIZATION OF "*Pipeline of antimicrobial agents in clinical development (WHO - Nov 2021).*"
 
-The task offered opportunity to upskill in data-visualization.
-**Skills developed** : Scientific Writing, Presentation skills.
+**Skills developed** : Data Analysis and Visualization, R (Programming language).
+
+The pipeline included information on drug type, clinical development phase, activity against pathogens, innovativeness, route of administration, antibiotic class, and developers of various drug candidates targeting WHO-identified bacterial priority pathogens, including Mycobacterium tuberculosis and Clostridium difficile. This task involved analyzing, visualizing, and presenting the data from the pipeline in the form of infographics.
+
 
