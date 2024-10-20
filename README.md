@@ -33,4 +33,10 @@ The task enhanced understanding of the significance of whole-genome sequencing (
 
 The pipeline included information on drug type, clinical development phase, activity against pathogens, innovativeness, route of administration, antibiotic class, and developers of various drug candidates targeting WHO-identified bacterial priority pathogens, including Mycobacterium tuberculosis and Clostridium difficile. This task involved analyzing, visualizing, and presenting the data from the pipeline in the form of infographics.
 
+<h2> STAGE 3 </h2>
 
+**TASK** : INTODUCTION TO BASH AND DATA ANALYSIS AND VISUALIZATION OF "*Global cholera outbreaks - 1949-2016 (WHO).*"
+
+**Skills developed** : Data Analysis and Visualization, Bash (Scripting language).
+
+The task provided knowledge on handling genomic data using Bash.
