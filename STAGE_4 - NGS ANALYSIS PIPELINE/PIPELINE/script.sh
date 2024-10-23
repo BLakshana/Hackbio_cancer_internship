@@ -80,7 +80,7 @@ for file in aligned_sequences/*_aligned.bam; do
 done
 
 # Indexing
-samtools index aligned_sequences/*_align_sorted.bam
+samtools index -M aligned_sequences/*_align_sorted.bam
 
 conda deactivate
 
